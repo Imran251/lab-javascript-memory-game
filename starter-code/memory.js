@@ -59,4 +59,10 @@ $(document).ready(function(){
 
   // Add all the divs to the HTML
   document.getElementById('memory_board').innerHTML = html;
+  allTheProducts = document.getElementsByClassName('product-row');
+  var price = parseInt(((allTheProducts[productId-1].getElementsByClassName('price'))[0].innerHTML).substring(1));
+  var quantity = parseInt(((allTheProducts[productId-1].getElementsByClassName('quantity'))[0].value));
+  //(allTheProducts[productId-1].getElementsByClassName('sub-total'))[0].innerHTML = "$"+price*quantity;
+  (allTheProducts[productId-1].getElementsByClassName('sub-total'))[0].innerHTML = "$"+price*quantity;
+  return price*quantity;
 });
