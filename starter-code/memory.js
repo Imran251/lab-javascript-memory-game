@@ -56,5 +56,10 @@ $(document).ready(function(){
     html += '</div>';
     html += '</div>';
   });
+  MemoryGame.prototype.selectCard = function(card) {
+    var selected = this.Cards [4];
+    var selected2 = this.Cards [6];
+    this.compareCards(selected,selected2);
+  };
 
 });
