@@ -62,4 +62,24 @@ $(document).ready(function(){
     this.compareCards(selected,selected2);
   };
 
+  MemoryGame.prototype.compareCards= function (selected,selected2){
+  if ( selected === selected2){
+    this.finishNumber -=1;
+    this.pairs_clicked +=1;
+    this.pairs_guessed +=1;
+    this.finished();
+  }else {
+    this.pairs_clicked +=1;
+  }
+};
+
+MemoryGame.prototype.finished = function() {
+  if (this.finishNumber ===  0){
+    return true;
+  }else {
+    return false;
+  }
+};
+
+
 });
